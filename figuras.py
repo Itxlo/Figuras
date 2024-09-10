@@ -1,21 +1,26 @@
-def calcular_area_rectangulo(base, altura):
-    area = base * altura
-    return area
+class Figura:
+    # Función para calcular el área de un rectángulo
+    def f(self, a, b):
+        result = a * b
+        return result
 
-def calcular_area_triangulo(base, altura):
-    area = 0.5 * base * altura
-    return area
+    # Función para calcular el área de un triángulo
+    def g(self, b, h):
+        r = 0.5 * b * h
+        return r
 
-# Función principal
-if __name__ == "__main__":
-    # Solicitar entrada del usuario para el rectángulo
-    base_rectangulo = float(input("Introduce la base del rectángulo: "))
-    altura_rectangulo = float(input("Introduce la altura del rectángulo: "))
-    area_rectangulo = calcular_area_rectangulo(base_rectangulo, altura_rectangulo)
-    print("El area del rectángulo es10:", area_rectangulo)
+    # Función principalS
+    def main(self):
+        x = 4
+        y = 6
+        rect_area = self(x, y)
+        print("Área del rectángulo:", rect_area)
 
-    # Solicitar entrada del usuario para el triángulo
-    base_triangulo = float(input("Introduce la base del triángulo: "))
-    altura_triangulo = float(input("Introduce la altura del triángulo: "))
-    area_triangulo = calcular_area_triangulo(base_triangulo, altura_triangulo)
-    print("El area del triángulo es:", area_triangulo)
+        base = 5
+        altura = 8
+        tri_area = self.g(base, altura)
+        print("Área del triángulo:", tri_area)
+
+if __name__ == '__main__':
+    figura = Figura()
+    figura.main()
